@@ -12,8 +12,8 @@ const About = () => {
             About me
           </p>
           <p className="py-6">
-            Hello!My name is Nicholas and I enjoy creating web application.I
-            have always been curious to know how appilications on the internet
+            Hello!My name is Nicholas Mutale and I enjoy creating web application.I
+            have always been curious to know how web apps on the internet
             work and when MOOCs were introduced back in 2008, I was excited to
             increase my knowledge of software development and enrolled in a few
             courses.
