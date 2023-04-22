@@ -14,7 +14,7 @@ function Work() {
           Projects
         </p>
         <div className="grid">
-        <div className="grid md:grid-cols-2">
+        <div className="grid md:grid-cols-2 py-16 bg-[#ffffff] rounded-2xl">
           <WorkItem
             title="Air Quality"
             backgroundImg={airquality}
@@ -34,28 +34,8 @@ function Work() {
           openweatherApi="Openwaether API"
           />
           </div>
-        <div className="grid md:grid-cols-2">
-          <WorkItem
-            title="Digi-Budget"
-            backgroundImg={digiBudgetApp}
-            projectUrl="/digibudgetapp"
-            techStack="#Ruby #Ruby on Rails #Tailwindcss"
-
-          />
-          <Description
-          description="The DigiBudget App is a mobile web application that allows the user
-          to manage his/her budget: they have a list of transactions
-          associated with a category, so that the user can see how much money
-          they spend and on a particular category."
-          demoLink="https://joli-choucroute-65855.herokuapp.com/"
-          codeLink="https://github.com/Mutalenic/digi_budget"
-          ruby="Ruby"
-          rails="Ruby on Rails"
-          postgres="PostgreSQL"
-          Tailwindcss="Tailwindcss"
-          />
-          </div>
-        <div className="grid md:grid-cols-2">
+        
+        <div className="grid md:grid-cols-2 py-16">
            <WorkItem
             title="Moviespace"
             backgroundImg={moviespace}
@@ -76,7 +56,28 @@ function Work() {
           Webpack="Webpack"
           />
           </div>
-        <div className="grid md:grid-cols-2">
+          <div className="grid md:grid-cols-2 py-16 bg-[#ffffff] rounded-2xl">
+          <WorkItem
+            title="Digi-Budget"
+            backgroundImg={digiBudgetApp}
+            projectUrl="/digibudgetapp"
+            techStack="#Ruby #Ruby on Rails #Tailwindcss"
+
+          />
+          <Description
+          description="The DigiBudget App is a mobile web application that allows the user
+          to manage his/her budget: they have a list of transactions
+          associated with a category, so that the user can see how much money
+          they spend and on a particular category."
+          demoLink="https://joli-choucroute-65855.herokuapp.com/"
+          codeLink="https://github.com/Mutalenic/digi_budget"
+          ruby="Ruby"
+          rails="Ruby on Rails"
+          postgres="PostgreSQL"
+          Tailwindcss="Tailwindcss"
+          />
+          </div>
+        <div className="grid md:grid-cols-2 py-16">
           <WorkItem
             title="Space Travelers Hub"
             backgroundImg={spcetravellers}
