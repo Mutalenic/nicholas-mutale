@@ -111,9 +111,11 @@ export default function Contact() {
                     name="message"
                   ></textarea>
                 </div>
-                <button className="w-full p-4 text-gray-100 mt-4">
-                  Send Message
-                </button>
+                <button className="w-full p-4 text-[#1e1a95] mt-4 shadow-lg shadow-blue-400 bg-blue-200 hover:bg-blue-300 hover:scale-90 ease-in duration-300">
+  Send Message
+</button>
+
+
               </form>
             </div>
           </div>
