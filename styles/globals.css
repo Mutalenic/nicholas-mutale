@@ -2,36 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .from-brand-indigo-600 {
+    --tw-gradient-from: #6B46C1;
+  }
+
+  .to-brand-indigo-400 {
+    --tw-gradient-to: #9F7AEA;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 @layer base {
   body {
-    @apply bg-[#fff0df] text-[#1f2937] tracking-wide
+    background-color: #ffffff;
+    color: #1F2937;
+    @apply tracking-wide;
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-bold;
   }
 
   h1 {
-    @apply text-4xl sm:text-5xl md:text-6xl
+    @apply text-4xl sm:text-5xl md:text-6xl;
   }
 
   h2 {
-    @apply text-3xl sm:text-4xl
+    @apply text-3xl sm:text-4xl;
   }
 
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer;
   }
 
   button {
-    @apply shadow-xl shadow-gray-500 rounded-xl uppercase bg-gradient-to-r from-[#332cec] to-[#7f88f2]
-}
+    @apply shadow-xl shadow-gray-500 rounded-xl uppercase bg-gradient-to-r from-brand-indigo-600 to-brand-indigo-400;
+  }
 }
 
 #navbar {
-  background-color: #fff0df;
+  background-color: #ffffff;
 }
