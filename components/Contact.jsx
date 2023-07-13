@@ -39,23 +39,23 @@ export default function Contact() {
               </div>
               <div className="flex items-center justify-between gap-5max-w-[330px] m-auto py-4 ">
                 <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <a href="https://www.linkedin.com/in/nicomutale/">
+                  <a href="https://www.linkedin.com/in/nicomutale/" target="_blank">
                     <FaLinkedinIn />
                   </a>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <a href="https://github.com/mutalenic">
+                  <a href="https://github.com/mutalenic" target="_blank">
                     <FaGithub />
                   </a>
                 </div>
 
                 <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <a href="mailto:nicomutale@gmail.com">
+                  <a href="mailto:nicomutale@gmail.com" target="_blank">
                     <CgMail />
                   </a>
                 </div>
                 <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <a href="https://twitter.com/nicomutale"><CgTwitter /></a>                
+              <a href="https://twitter.com/nicomutale" target="_blank"><CgTwitter /></a>                
                 </div>
               </div>
             </div>
