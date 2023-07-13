@@ -26,15 +26,15 @@ function airquality() {
           <p>Project</p>
           <h3>Overview</h3>
           <p>
-            This is an app for tracking air pollution in a country .In this web
-            app you will be able to see what the current air quality data is and
-            also can track the data of air pollution based on gas percentage of
+            This is an app for tracking air pollution in a country. In this web
+            app you will be able to see the current air quality data is and
+            also can track the data of air pollution based on the gas percentage of
             air
           </p>
-          <a href="https://deploy-preview-2--stately-kashata-1db13f.netlify.app/">
+          <a href="https://deploy-preview-2--stately-kashata-1db13f.netlify.app/" target="_blank">
           <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
-          <a href="https://github.com/Mutalenic/air-quality-data">
+          <a href="https://github.com/Mutalenic/air-quality-data" target="_blank">
           <button className="px-8 py-2 mt-4 mr-8">Code</button></a>
         </div>
         <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
