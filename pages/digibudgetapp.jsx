@@ -29,12 +29,12 @@ function digibudgetapp() {
             The DigiBudget App is a mobile web application that allows the user
             to manage his/her budget: they have a list of transactions
             associated with a category, so that the user can see how much money
-            they spend and on a particular category.
+            they spend on a particular category.
           </p>
-          <a href="https://joli-choucroute-65855.herokuapp.com/">
+          <a href="https://joli-choucroute-65855.herokuapp.com/" target="_blank">
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
-          <a href="https://github.com/Mutalenic/digi_budget">
+          <a href="https://github.com/Mutalenic/digi_budget" target="_blank">
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
         </div>
