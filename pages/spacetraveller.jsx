@@ -31,10 +31,10 @@ function spacetraveller() {
             scientific space travel services. The application allows users to
             book rockets and join selected space missions.
           </p>
-          <a href="https://6262b54ee8f3d52d5200c258--tiny-bavarois-1b6015.netlify.app/">
+          <a href="https://6262b54ee8f3d52d5200c258--tiny-bavarois-1b6015.netlify.app/" target="_blank">
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
-          <a href="https://github.com/Mutalenic/space_travelers_hub">
+          <a href="https://github.com/Mutalenic/space_travelers_hub" target="_blank">
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
         </div>
