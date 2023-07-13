@@ -26,8 +26,8 @@ function Work() {
           app you will be able to see the current air quality data is and
           also can track the data of air pollution based on gas percentage of
           air"
-          demoLink="https://deploy-preview-2--stately-kashata-1db13f.netlify.app/" target="_blank"
-          codeLink="https://github.com/Mutalenic/air-quality-data" target="_blank"
+          demoLink="https://deploy-preview-2--stately-kashata-1db13f.netlify.app/"  target="_blank" rel="noopener noreferrer"
+          codeLink="https://github.com/Mutalenic/air-quality-data"  target="_blank" rel="noopener noreferrer"
           react="ReactJs"
           redux="Redux"
           restcountriesApi="Restcountries API"
@@ -48,8 +48,8 @@ function Work() {
           based on an external API. We selected an API that provides data
           about a topic we liked and then built the web app around it. The
           web app has 2 user interfaces."
-          demoLink="https://natig25.github.io/MovieSpace/" target="_blank"
-          codeLink="https://github.com/Mutalenic/JS-capstone" target="_blank"
+          demoLink="https://natig25.github.io/MovieSpace/"  target="_blank" rel="noopener noreferrer"
+          codeLink="https://github.com/Mutalenic/JS-capstone"  target="_blank" rel="noopener noreferrer"
           javascript="JavaScript"
           css="CSS"
           tvmazeApi="TVmazeApi"
@@ -69,8 +69,8 @@ function Work() {
           to manage his/her budget: they have a list of transactions
           associated with a category, so that the user can see how much money
           they spend and on a particular category."
-          demoLink="https://joli-choucroute-65855.herokuapp.com/" target="_blank"
-          codeLink="https://github.com/Mutalenic/digi_budget" target="_blank"
+          demoLink="https://joli-choucroute-65855.herokuapp.com/" target="_blank" rel="noopener noreferrer"
+          codeLink="https://github.com/Mutalenic/digi_budget"  target="_blank" rel="noopener noreferrer"
           ruby="Ruby"
           rails="Ruby on Rails"
           postgres="PostgreSQL"
@@ -90,8 +90,8 @@ function Work() {
           React and Redux for a company that provides commercial and
           scientific space travel services. The application allows users to
           book rockets and join selected space missions."
-          demoLink="https://6262b54ee8f3d52d5200c258--tiny-bavarois-1b6015.netlify.app/" target="_blank"
-          codeLink="https://github.com/Mutalenic/space_travelers_hub" target="_blank"
+          demoLink="https://6262b54ee8f3d52d5200c258--tiny-bavarois-1b6015.netlify.app/"  target="_blank" rel="noopener noreferrer"
+          codeLink="https://github.com/Mutalenic/space_travelers_hub"  target="_blank" rel="noopener noreferrer"
           react="ReactJS"
           css="CSS"
           redux="Redux"

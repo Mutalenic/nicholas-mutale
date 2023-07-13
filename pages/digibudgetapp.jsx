@@ -31,10 +31,10 @@ function digibudgetapp() {
             associated with a category, so that the user can see how much money
             they spend on a particular category.
           </p>
-          <a href="https://joli-choucroute-65855.herokuapp.com/" target="_blank">
+          <a href="https://joli-choucroute-65855.herokuapp.com/" target="_blank" rel="noopener noreferrer">
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
-          <a href="https://github.com/Mutalenic/digi_budget" target="_blank">
+          <a href="https://github.com/Mutalenic/digi_budget" target="_blank" rel="noopener noreferrer">
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
         </div>
