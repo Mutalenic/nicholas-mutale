@@ -28,13 +28,13 @@ function moviespace() {
           <p>
             This JavaScript capstone project is about building a web application
             based on an external API. We selected an API that provides data
-            about a topic that we liked and then built the webapp around it. The
-            webapp has 2 user interfaces.{" "}
+            about a topic that we liked and then built the web app around it. The
+            web app has 2 user interfaces.{" "}
           </p>
-          <a href="https://natig25.github.io/MovieSpace/">
+          <a href="https://natig25.github.io/MovieSpace/" target="_blank">
             <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
-          <a href="https://github.com/Mutalenic/JS-capstone">
+          <a href="https://github.com/Mutalenic/JS-capstone" target="_blank">
             <button className="px-8 py-2 mt-4 mr-8">Code</button>
           </a>
         </div>
