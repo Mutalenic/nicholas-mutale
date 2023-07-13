@@ -12,10 +12,10 @@ function Description({description, demoLink, codeLink, react, javascript, tvmaze
           <p>
             {description}
           </p>
-          <a href={demoLink}>
+          <a href={demoLink} target="_blank" rel="noopener noreferrer">
           <button className="px-8 py-2 mt-4 mr-8">Demo</button>
           </a>
-          <a href={codeLink}>
+          <a href={codeLink} target="_blank" rel="noopener noreferrer">
           <button className="px-8 py-2 mt-4 mr-8">Code</button></a>
         </div>
         <div className="col-span- md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
