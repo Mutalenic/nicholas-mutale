@@ -21,24 +21,24 @@ function Hero() {
           </div>
           <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
             <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <a href="https://www.linkedin.com/in/nicomutale/" target="_blank">
+              <a href="https://www.linkedin.com/in/nicomutale/"  target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn />
               </a>
             </div>
 
             <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <a href="https://github.com/mutalenic" target="_blank">
+              <a href="https://github.com/mutalenic" target="_blank" rel="noopener noreferrer">
                 <FaGithub />
               </a>
             </div>
 
             <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <a href="mailto:nicomutale@gmail.com" target="_blank">
+              <a href="mailto:nicomutale@gmail.com"  target="_blank" rel="noopener noreferrer">
                 <CgMail />
               </a>
             </div>
             <div className="rounded-full shadow-lg shadow-gray-300 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-              <a href="https://twitter.com/nicomutale" target="_blank"><CgTwitter /></a>
+              <a href="https://twitter.com/nicomutale" target="_blank" rel="noopener noreferrer"><CgTwitter /></a>
             </div>
           </div>
         </div>
