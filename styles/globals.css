@@ -12,15 +12,19 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-lightBg dark:bg-darkBg;
+  }
+  
   body {
-    background-color: #ffffff;
-    color: #1F2937;
-    @apply tracking-wide;
+    @apply m-0 p-0 min-h-screen w-full bg-lightBg dark:bg-darkBg text-lightText dark:text-darkText tracking-wide;
+  }
+
+  /* Important! Explicitly set color for #__next div */
+  #__next {
+    @apply min-h-screen w-full bg-lightBg dark:bg-darkBg;
   }
 
   h1,
@@ -50,5 +54,5 @@ html {
 }
 
 #navbar {
-  background-color: #ffffff;
+  @apply bg-lightBg dark:bg-darkBg;
 }
