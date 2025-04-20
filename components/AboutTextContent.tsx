@@ -3,21 +3,21 @@ import React from 'react';
 const AboutTextContent: React.FC = () => {
   return (
     <>
-      <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Hello, I'm Nicholas</h3>
+      <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Hello, I&apos;m Nicholas</h3>
 
       <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
-        I'm a passionate Full Stack Developer with expertise in modern web technologies. I specialize in creating responsive, user-friendly applications with clean, maintainable code.
+        I&apos;m a passionate Full Stack Developer with expertise in modern web technologies. I specialize in creating responsive, user-friendly applications with clean, maintainable code.
       </p>
 
       {/* Enhanced text container */}
       <div className="bg-gradient-to-r from-white to-blue-50 dark:from-gray-700 dark:to-gray-700/80 rounded-lg p-6 mb-6 border border-gray-100 dark:border-gray-600/50">
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed break-words">
-          My technical proficiency spans across <span className="font-semibold text-blue-600 dark:text-blue-400">TypeScript, JavaScript, React, NextJS, Redux, Node.js, Ruby on Rails</span>, and SQL/NoSQL databases. I'm committed to crafting seamless user experiences through responsive design and efficient front-end to back-end integration.
+          My technical proficiency spans across <span className="font-semibold text-blue-600 dark:text-blue-400">TypeScript, JavaScript, React, NextJS, Redux, Node.js, Ruby on Rails</span>, and SQL/NoSQL databases. I&apos;m committed to crafting seamless user experiences through responsive design and efficient front-end to back-end integration.
         </p>
       </div>
 
       <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
-        With a strong foundation in software development principles and agile methodologies, I leverage TypeScript's type safety and NextJS's server-side rendering capabilities to build performant, SEO-friendly applications that meet modern web standards.
+        With a strong foundation in software development principles and agile methodologies, I leverage TypeScript&apos;s type safety and NextJS&apos;s server-side rendering capabilities to build performant, SEO-friendly applications that meet modern web standards.
       </p>
 
       {/* Modern Tag Cloud */}
