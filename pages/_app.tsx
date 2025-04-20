@@ -1,7 +1,9 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Navbar from '../components/Navbar'
-import { ThemeProvider } from '../context/ThemeContext'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Navbar from "../components/Navbar";
+import { ThemeProvider } from "../context/ThemeContext";
+// Import SpeedInsights
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -12,6 +14,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </main>
       </div>
+      {/* Add SpeedInsights component */}
+      <SpeedInsights />
     </ThemeProvider>
   );
 }
