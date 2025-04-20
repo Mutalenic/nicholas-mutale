@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react"; // Added useRef
 import { CgClose, CgMenu, CgMail, CgTwitter } from "react-icons/cg";
 import { FaLinkedinIn, FaGithub, FaMoon, FaSun } from "react-icons/fa";
 import Logo from "../public/assets/logo.png";
@@ -9,22 +9,46 @@ import { useTheme } from "../context/ThemeContext";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); // State for navbar visibility
+  const lastScrollY = useRef(0); // Ref to store last scroll position
   const { darkMode, toggleDarkMode } = useTheme();
 
+  // Effect for scroll-based shadow (existing)
   useEffect(() => {
-    const navShadow = () => {
+    const handleShadow = () => {
       if (window.scrollY >= 90) {
         setShadow(true);
       } else {
         setShadow(false);
       }
     };
-    window.addEventListener("scroll", navShadow);
-    
+    window.addEventListener("scroll", handleShadow);
     return () => {
-      window.removeEventListener("scroll", navShadow);
+      window.removeEventListener("scroll", handleShadow);
     };
   }, []);
+
+  // Effect for scroll-based visibility (new)
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY;
+      // Hide navbar if scrolling down and past 100px
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        // Show navbar if scrolling up or near the top
+        setIsVisible(true);
+      }
+      // Update last scroll position, but only if positive
+      lastScrollY.current = currentScrollY <= 0 ? 0 : currentScrollY; 
+    };
+
+    window.addEventListener("scroll", controlNavbar, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []); // Empty dependency array means this effect runs once on mount
 
   const handleNav = () => {
     setNav(!nav);
@@ -51,7 +75,7 @@ const Navbar = () => {
       </div>
       
       {/* Floating Navigation Links - Desktop */}
-      <div className="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 flex-col gap-4 z-[101]">
+      <div className={`hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 flex-col gap-4 z-[101] transition-transform duration-300 ease-in-out ${isVisible ? 'translate-x-0' : 'translate-x-[200%]'}`}>
         <Link href="/">
           <div className={`${shadow ? 'shadow-md' : ''} p-2 rounded-full cursor-pointer transition-all duration-300 hover:scale-110 ${darkMode ? 'bg-gray-800 text-gray-200 hover:bg-gray-700 hover:text-blue-400' : 'bg-white text-gray-800 hover:text-blue-600'}`}>
             <span className="font-medium px-3">Home</span>
@@ -96,7 +120,7 @@ const Navbar = () => {
       {/* Mobile Menu Toggle */}
       <div 
         onClick={handleNav}
-        className="md:hidden fixed bottom-4 right-4 z-[101] p-3 rounded-full cursor-pointer transition-colors duration-300 hover:scale-110 shadow-md"
+        className={`md:hidden fixed bottom-4 right-4 z-[101] p-3 rounded-full cursor-pointer transition-transform duration-300 ease-in-out hover:scale-110 shadow-md ${isVisible ? 'translate-y-0' : 'translate-y-[200%]'}`}
         style={{ backgroundColor: darkMode ? '#1e1e1e' : '#ffffff' }}
       >
         <CgMenu className={darkMode ? "text-gray-200" : ""} size={20} />
