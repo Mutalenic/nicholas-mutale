@@ -119,15 +119,25 @@ const categories = [
 
 const SkillCard = ({ skill }) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transform hover:scale-102 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group h-full">
-      <div className="flex flex-col items-center p-3 text-center">
-        <div className={`p-2 rounded-lg ${skill.color} bg-opacity-10 dark:bg-opacity-20 mb-2`}>
+    <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group h-full">
+      {/* Card Background Pattern */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-10 z-0">
+        <div className={`w-32 h-32 ${skill.color} rounded-full -top-12 -right-12 absolute blur-xl`}></div>
+        <div className={`w-24 h-24 ${skill.color} rounded-full -bottom-8 -left-8 absolute blur-lg`}></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5 dark:to-white/5"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/5 dark:from-white/5 to-transparent"></div>
+        <div className="absolute w-full h-16 -bottom-8 left-0 transform rotate-6 scale-125 ${skill.color} opacity-10"></div>
+      </div>
+      
+      {/* Content */}
+      <div className="flex flex-col items-center p-4 text-center relative z-10">
+        <div className={`p-3 rounded-full ${skill.color} bg-opacity-15 dark:bg-opacity-30 mb-3 backdrop-blur-sm ring-1 ring-gray-100 dark:ring-gray-700 shadow-md group-hover:shadow-lg transition-all duration-300`}>
           <div className={`${skill.textColor} group-hover:scale-110 transition-transform duration-300`}>
-            {React.cloneElement(skill.icon, { size: 24 })}
+            {React.cloneElement(skill.icon, { size: 30 })}
           </div>
         </div>
         <div>
-          <h3 className="font-bold text-sm mb-0.5 text-gray-800 dark:text-gray-200">{skill.name}</h3>
+          <h3 className="font-bold text-sm mb-1 text-gray-800 dark:text-gray-200">{skill.name}</h3>
           <p className="text-xs text-gray-500 dark:text-gray-400">{skill.experience}</p>
         </div>
       </div>
