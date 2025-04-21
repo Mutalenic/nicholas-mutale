@@ -10,7 +10,7 @@
 
 ## Live Demo
 
-- [Live Demo](https://nicholas-mutale.vercel.app/)
+- [Live Demo](https://nicholasmutale.vercel.app/)
 
 
 # Getting Started
