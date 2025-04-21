@@ -95,7 +95,7 @@ const Contact: React.FC = () => {
           <p className="inline-block text-lg font-medium text-blue-600 dark:text-blue-400 mb-4 px-4 py-1 bg-blue-50 dark:bg-blue-900/30 rounded-full">
             GET IN TOUCH
           </p>
-          <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-white">Let`&apos;`s Work Together</h2>
+          <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-white">Let&apos;s Work Together</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-4 rounded-full"></div>
         </div>
         
