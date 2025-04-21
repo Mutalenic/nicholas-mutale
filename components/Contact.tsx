@@ -32,13 +32,15 @@ const Contact: React.FC = () => {
       { threshold: 0.1 }
     );
     
-    if (formRef.current) {
-      observer.observe(formRef.current);
+    const currentForm = formRef.current;
+    
+    if (currentForm) {
+      observer.observe(currentForm);
     }
     
     return () => {
-      if (formRef.current) {
-        observer.unobserve(formRef.current);
+      if (currentForm) {
+        observer.unobserve(currentForm);
       }
     };
   }, []);
@@ -93,7 +95,7 @@ const Contact: React.FC = () => {
           <p className="inline-block text-lg font-medium text-blue-600 dark:text-blue-400 mb-4 px-4 py-1 bg-blue-50 dark:bg-blue-900/30 rounded-full">
             GET IN TOUCH
           </p>
-          <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-white">Let's Work Together</h2>
+          <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-white">Let`&apos;`s Work Together</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-4 rounded-full"></div>
         </div>
         
@@ -117,9 +119,7 @@ const Contact: React.FC = () => {
               
               <div className="mb-8">
                 <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">Nicholas Mutale</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">Full Stack Developer</p>
-                <p className="text-gray-600 dark:text-gray-300">
-                  I'm available for freelance work, full-time positions, and collaborative projects. 
+                <p className="text-gray-600 dark:text-gray-300">I&apos;m available for freelance work, full-time positions, and collaborative projects. 
                   Feel free to reach out if you have any opportunities or questions!
                 </p>
               </div>
@@ -195,7 +195,7 @@ const Contact: React.FC = () => {
                 </svg>
                 <div>
                   <p className="font-medium">Message sent successfully!</p>
-                  <p className="text-sm">Thanks for reaching out. I'll get back to you soon.</p>
+                  <p className="text-sm">Thanks for reaching out. I&apos;ll get back to you soon.</p>
                 </div>
               </div>
             )}

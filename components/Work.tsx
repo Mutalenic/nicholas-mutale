@@ -276,7 +276,7 @@ const Work: React.FC = () => {
           <p className="text-xl tracking-widest uppercase text-[#1e1a95] dark:text-blue-400 inline-block bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full mb-2">
             Projects
           </p>
-          <h2 className="text-4xl font-bold mt-2 dark:text-white">What I've Built</h2>
+          <h2 className="text-4xl font-bold mt-2 dark:text-white">What I&apos;ve Built</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-500 mt-3 mx-auto"></div>
         </div>
         

@@ -162,13 +162,15 @@ const Skills: React.FC = () => {
       { threshold: 0.1 }
     );
     
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
+    const currentRef = skillsRef.current;
+    
+    if (currentRef) {
+      observer.observe(currentRef);
     }
     
     return () => {
-      if (skillsRef.current) {
-        observer.unobserve(skillsRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);

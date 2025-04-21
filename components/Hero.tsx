@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
         
         <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold py-4 text-gray-700 dark:text-gray-200">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-indigo-300">Nicholas</span>
+            Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-500 dark:from-blue-400 dark:to-indigo-300">Nicholas</span>
           </h1>
           
           <h2 className="text-2xl md:text-3xl py-2 text-gray-700 dark:text-gray-200 mb-2">
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
           </p>
           
           <div className="py-3 text-gray-500 dark:text-gray-400 font-medium">
-            <p>Let's connect!</p>
+            <p>Let&apos;s connect!</p>
           </div>
           
           <div className="flex items-center justify-center space-x-5 py-4 z-10 relative">
