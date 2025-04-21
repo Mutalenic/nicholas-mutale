@@ -132,7 +132,8 @@ const SkillCard = ({ skill }) => {
       {/* Content */}
       <div className="flex flex-col items-center p-4 text-center relative z-10">
         <div className={`p-3 rounded-full ${skill.color} bg-opacity-15 dark:bg-opacity-30 mb-3 backdrop-blur-sm ring-1 ring-gray-100 dark:ring-gray-700 shadow-md group-hover:shadow-lg transition-all duration-300`}>
-          <div className={`${skill.textColor} group-hover:scale-110 transition-transform duration-300`}>
+          {/* Updated to ensure visibility in both light and dark modes */}
+          <div className="text-gray-800 dark:text-white group-hover:scale-110 transition-transform duration-300">
             {React.cloneElement(skill.icon, { size: 30 })}
           </div>
         </div>

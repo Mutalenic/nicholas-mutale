@@ -169,7 +169,7 @@ const Contact: React.FC = () => {
                     href="https://x.com/nicomutale"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-black dark:bg-gray-700 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-500 hover:scale-110 text-black-400 dark:text-black-300 hover:text-white dark:hover:text-white hover:bg-black dark:hover:bg-black transform-gpu"
+                    className="bg-white dark:bg-gray-700 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-500 hover:scale-110 text-black-400 dark:text-black-300 hover:text-white dark:hover:text-white hover:bg-black dark:hover:bg-black transform-gpu"
                     aria-label="X Profile"
                   >
                     <FontAwesomeIcon icon={faXTwitter} size="lg" className="transition-colors duration-500" />
