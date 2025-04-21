@@ -104,7 +104,13 @@ const Hero: React.FC = () => {
             </a>
           </div>
           
-          <div className="mt-8 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-16">
+            <a
+              href="#contact"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 font-bold"
+            >
+              Hire Me
+            </a>
             <a
               href="#work"
               className="inline-block px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1"
