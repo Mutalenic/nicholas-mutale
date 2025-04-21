@@ -15,6 +15,15 @@ module.exports = {
         lightCard: '#f3f4f6',
         lightText: '#1f2937',
       },
+      keyframes: {
+        'attention-zoom': {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+        }
+      },
+      animation: {
+        'attention-zoom': 'attention-zoom 1s ease-in-out',
+      }
     },
   },
   plugins: [],
