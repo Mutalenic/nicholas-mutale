@@ -2,7 +2,9 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 
 type ThemeContextType = {
   darkMode: boolean;
-  toggleDarkMode: () => void;
+  isDarkMode: boolean; // Added alias for compatibility
+  toggleTheme: () => void;
+  toggleDarkMode: () => void; // Keeping original method for backward compatibility
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -37,8 +39,16 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
   };
 
+  // Create an alias for the toggle function to match expected naming
+  const toggleTheme = toggleDarkMode;
+
   return (
-    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
+    <ThemeContext.Provider value={{ 
+      darkMode, 
+      isDarkMode: darkMode, // Add isDarkMode as an alias pointing to darkMode
+      toggleDarkMode, 
+      toggleTheme // Add toggleTheme as an alias for toggleDarkMode
+    }}>
       {children}
     </ThemeContext.Provider>
   );

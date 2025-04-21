@@ -1,21 +1,20 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import Navbar from "../components/Navbar";
-import { ThemeProvider } from "../context/ThemeContext";
-// Import SpeedInsights
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from '../context/ThemeContext';
+import Navbar from '../components/Navbar';
+import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+
   return (
     <ThemeProvider>
-      <div className="flex flex-col min-h-screen w-full bg-lightBg dark:bg-darkBg text-lightText dark:text-darkText">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
         <Navbar />
-        <main className="flex-grow w-full bg-lightBg dark:bg-darkBg">
+        <main>
           <Component {...pageProps} />
         </main>
       </div>
-      {/* Add SpeedInsights component */}
-      <SpeedInsights />
     </ThemeProvider>
   );
 }
