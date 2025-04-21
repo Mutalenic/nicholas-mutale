@@ -23,7 +23,7 @@ const SpaceTraveller: NextPage = () => {
           layout="fill"
           objectFit="cover"
           src={spacetravellerImg}
-          alt="SpaceTraveler's Hub Application Screenshot"
+          alt="SpaceTraveler&apos;s Hub Application Screenshot"
           priority
         />
         <motion.div 
@@ -32,7 +32,7 @@ const SpaceTraveller: NextPage = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-white z-10 p-4 absolute top-[70%] max-w-[1240px] w-full left-[50%] translate-x-[-50%] translate-y-[-50%]"
         >
-          <h1 className="py-2 text-4xl md:text-5xl font-bold">Space Traveler's Hub</h1>
+          <h1 className="py-2 text-4xl md:text-5xl font-bold">Space Traveler&apos;s Hub</h1>
           <h3 className="text-xl md:text-2xl text-gray-200">React / Redux / SpaceX API</h3>
         </motion.div>
       </div>
@@ -54,10 +54,10 @@ const SpaceTraveller: NextPage = () => {
           <h2 className="text-3xl font-bold mb-4 dark:text-gray-200">Overview</h2>
           <div className="dark:text-gray-300 space-y-4 text-lg">
             <p>
-              Space Traveler's Hub is a sophisticated web application built for a company that provides commercial and scientific space travel services. The application leverages real-time data from the SpaceX API to deliver an immersive experience for users planning their space adventures.
+              Space Traveler&apos;s Hub is a sophisticated web application built for a company that provides commercial and scientific space travel services. The application leverages real-time data from the SpaceX API to deliver an immersive experience for users planning their space adventures.
             </p>
             <p>
-              With Space Traveler's Hub, users can:
+              With Space Traveler&apos;s Hub, users can:
             </p>
             <ul className="list-disc pl-6 my-4 space-y-2">
               <li>Browse available rockets and missions with detailed specifications</li>
@@ -132,7 +132,7 @@ const SpaceTraveller: NextPage = () => {
             <h3 className="text-2xl font-bold mb-4 dark:text-gray-200">Technical Implementation</h3>
             <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
               <p className="dark:text-gray-300 mb-4">
-                The Space Traveler's Hub application demonstrates several advanced front-end development practices:
+                The Space Traveler&apos;s Hub application demonstrates several advanced front-end development practices:
               </p>
               <ul className="list-disc pl-6 space-y-2 dark:text-gray-300">
                 <li>Centralized state management with Redux for consistent data flow</li>
