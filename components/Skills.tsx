@@ -126,7 +126,7 @@ const SkillCard = ({ skill }) => {
         <div className={`w-24 h-24 ${skill.color} rounded-full -bottom-8 -left-8 absolute blur-lg`}></div>
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5 dark:to-white/5"></div>
         <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/5 dark:from-white/5 to-transparent"></div>
-        <div className="absolute w-full h-16 -bottom-8 left-0 transform rotate-6 scale-125 ${skill.color} opacity-10"></div>
+        <div className={`absolute w-full h-16 -bottom-8 left-0 transform rotate-6 scale-125 ${skill.color} opacity-10`}></div>
       </div>
       
       {/* Content */}
