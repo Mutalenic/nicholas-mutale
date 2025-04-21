@@ -181,9 +181,9 @@ const Skills: React.FC = () => {
       if (window.innerWidth < 640) {
         setSlidesToShow(2);
       } else if (window.innerWidth < 768) {
-        setSlidesToShow(3);
+        setSlidesToShow(2);
       } else {
-        setSlidesToShow(4);
+        setSlidesToShow(3);
       }
     };
     
