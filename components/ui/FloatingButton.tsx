@@ -23,7 +23,7 @@ const FloatingButton: React.FC = () => {
     <>
       {isVisible && (
         <div className="fixed bottom-8 right-8 z-50 transform transition-all duration-300 hover:scale-110 animate-pulse hover:animate-none">
-          <Link href="#contact">
+          <Link href="#contact-form">
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
               <button 

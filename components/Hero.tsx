@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-16">
             <a
-              href="#contact"
+              href="#contact-form"
               className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 font-bold"
             >
               Hire Me

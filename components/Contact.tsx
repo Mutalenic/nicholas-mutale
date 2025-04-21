@@ -21,6 +21,7 @@ const Contact: React.FC = () => {
   const [submitError, setSubmitError] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [scale, setScale] = useState(1);
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,6 +43,29 @@ const Contact: React.FC = () => {
       if (currentForm) {
         observer.unobserve(currentForm);
       }
+    };
+  }, []);
+
+  // Handle animation when the contact form is directly accessed via URL hash
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#contact-form') {
+        // Create zoom animation using state
+        setScale(1.05);
+        setTimeout(() => setScale(1), 300);
+        setTimeout(() => setScale(1.03), 600);
+        setTimeout(() => setScale(1), 900);
+      }
+    };
+
+    // Check on mount
+    handleHashChange();
+    
+    // Add event listener for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
     };
   }, []);
 
@@ -89,7 +113,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="w-full py-24 bg-white dark:bg-gray-900">
+    <div id="contact" className="w-full py-24 bg-white dark:bg-gray-900 scroll-mt-24">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <p className="inline-block text-lg font-medium text-blue-600 dark:text-blue-400 mb-4 px-4 py-1 bg-blue-50 dark:bg-blue-900/30 rounded-full">
@@ -181,9 +205,14 @@ const Contact: React.FC = () => {
           
           {/* Contact Form */}
           <div 
-            className={`bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 transition-all duration-700 transform ${
+            id="contact-form"
+            style={{ 
+              transform: `scale(${scale})`,
+              transition: 'transform 0.3s ease-in-out' 
+            }}
+            className={`bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 transition-all duration-700 ${
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
-            }`}
+            } scroll-mt-28`}
           >
             <h3 className="text-2xl font-bold mb-6 text-gray-800 dark:text-white">Send Me a Message</h3>
             

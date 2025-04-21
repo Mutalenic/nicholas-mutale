@@ -2,6 +2,7 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from '../context/ThemeContext';
 import Navbar from '../components/Navbar';
+import FloatingButton from '../components/ui/FloatingButton';
 import { useRouter } from 'next/router';
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -14,6 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <main>
           <Component {...pageProps} />
         </main>
+        <FloatingButton />
       </div>
     </ThemeProvider>
   );
