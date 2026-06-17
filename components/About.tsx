@@ -47,35 +47,20 @@ const About: React.FC = () => {
               <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Hello, I&apos;m Nicholas</h3>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
-                I&apos;m a passionate Full Stack Developer with expertise in modern web technologies. I specialize in creating responsive, user-friendly applications with clean, maintainable code.
+                I&apos;m a backend-leaning full-stack engineer with a few years of production experience under my belt. Most of my work lives in Ruby on Rails — I&apos;ve led multi-version upgrades on live systems, designed and hardened APIs, managed deployment pipelines across multiple environments, and debugged the kind of production issues that don&apos;t show up in tutorials.
               </p>
-
-              {/* Enhanced text container - Removed outer shadow/border as it's now on the parent */}
-              <div className="bg-gradient-to-r from-white to-blue-50 dark:from-gray-700 dark:to-gray-700/80 rounded-lg p-6 mb-6 border border-gray-100 dark:border-gray-600/50">
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed break-words">
-                  My technical proficiency spans across <span className="font-semibold text-blue-600 dark:text-blue-400">TypeScript, JavaScript, React, NextJS, Redux, Node.js, Ruby on Rails</span>, and SQL/NoSQL databases. I&apos;m committed to crafting seamless user experiences through responsive design and efficient front-end to back-end integration.
-                </p>
-              </div>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
-                With a strong foundation in software development principles and agile methodologies, I leverage TypeScript&apos;s type safety and NextJS&apos;s server-side rendering capabilities to build performant, SEO-friendly applications that meet modern web standards.
+                Right now I&apos;m contracting on two live products: a public sector CMS serving government bodies across Europe, and Bluemify, a healthcare platform I helped build from the ground up as one of two backend engineers. It recently went live and is onboarding its first users.
               </p>
 
-              {/* Modern Tag Cloud */}
-              <div className="mb-8">
-                <p className="text-sm uppercase font-semibold mb-3 text-gray-500 dark:text-gray-400">My Tech Stack</p>
-                <div className="flex flex-wrap gap-3">
-                  {/* Reordered skills */}
-                  <span className="px-4 py-2 text-sm bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-lg shadow-sm border border-blue-100 dark:border-blue-900/50 hover:shadow-md transition-all duration-300">NextJS</span>
-                  <span className="px-4 py-2 text-sm bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-lg shadow-sm border border-blue-100 dark:border-blue-900/50 hover:shadow-md transition-all duration-300">React</span>
-                  <span className="px-4 py-2 text-sm bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-lg shadow-sm border border-blue-100 dark:border-blue-900/50 hover:shadow-md transition-all duration-300">TypeScript</span>
-                  <span className="px-4 py-2 text-sm bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-lg shadow-sm border border-blue-100 dark:border-blue-900/50 hover:shadow-md transition-all duration-300">Redux</span>
-                  <span className="px-4 py-2 text-sm bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-lg shadow-sm border border-blue-100 dark:border-blue-900/50 hover:shadow-md transition-all duration-300">JavaScript</span>
-                  <span className="px-4 py-2 text-sm bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-lg shadow-sm border border-blue-100 dark:border-blue-900/50 hover:shadow-md transition-all duration-300">Ruby on Rails</span>
-                  {/* Add Ruby */}
-                  <span className="px-4 py-2 text-sm bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 rounded-lg shadow-sm border border-blue-100 dark:border-blue-900/50 hover:shadow-md transition-all duration-300">Ruby</span>
-                </div>
-              </div>
+              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
+                I also build my own things. Keelfine is a personal finance app I&apos;ve been working on, built with Rails and Tailwind CSS v4, aimed at everyday users in the Zambian market.
+              </p>
+
+              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
+                I work remotely, async, and I take ownership of what I ship. If you have a hard Rails problem or a production system that needs serious attention, I&apos;d like to hear about it.
+              </p>
 
               {/* CTA Button */}
               <Link href="/#work" className="inline-block mt-4 px-8 py-3 bg-blue-600 dark:bg-blue-700 hover:bg-blue-700 dark:hover:bg-blue-600 text-white font-medium rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-1">
