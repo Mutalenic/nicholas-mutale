@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
           </h1>
           
           <h2 className="text-2xl md:text-3xl py-2 text-gray-700 dark:text-gray-200 mb-2">
-            Backend Engineer · Ruby on Rails · Building production systems that scale
+            Full-Stack Engineer — Ruby on Rails & React
           </h2>
           
           <p className="text-md md:text-lg py-4 text-gray-600 dark:text-gray-300 max-w-[700px] mx-auto mb-4">

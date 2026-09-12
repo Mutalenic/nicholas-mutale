@@ -18,20 +18,15 @@ const About: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
           {/* Image Column - Adjusted column span */}
           {/* Added hidden on mobile (default) and md:flex to show on medium+ screens */}
-          <div className="hidden md:flex md:col-span-3 order-2 md:order-1 justify-center md:justify-start"> {/* Added flex centering */}
-            <div className="relative mx-auto md:mx-0 w-fit"> {/* Added w-fit */}
-              {/* Removed the absolute positioned decorative border div */}
-
-              {/* Changed to rounded-full for circular image */}
+          <div className="flex md:col-span-4 order-2 md:order-1 justify-center md:justify-start mb-8 md:mb-0">
+            <div className="relative mx-auto md:mx-0 w-fit">
               <div className="relative z-10 overflow-hidden rounded-full shadow-2xl dark:shadow-blue-900/20">
                 <Image
-                  // Added rounded-full class
                   className="hover:scale-105 transition-all duration-500 rounded-full"
                   src={profileImg}
-                  // Adjusted width and height to be equal for a circle
-                  width={300} // Kept width 300
-                  height={300} // Changed height to 300
-                  alt="Profile of Nicholas Mutale, Full Stack Developer"
+                  width={300}
+                  height={300}
+                  alt="Profile of Nicholas Mutale, Full-Stack Engineer"
                   priority
                   style={{ objectFit: "cover" }}
                 />
@@ -41,25 +36,20 @@ const About: React.FC = () => {
 
           {/* Content Column - Adjusted column span and padding */}
           {/* Adjusted column span to take full width on mobile */}
-          <div className="col-span-1 md:col-span-9 order-1 md:order-2 md:pr-20">
-            {/* Added wrapper div for text content with shadow - Increased padding */}
-            <div className="bg-white dark:bg-gray-800 p-12 rounded-xl shadow-lg dark:shadow-gray-700"> {/* Changed p-6 to p-8 */}
-              <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Hello, I&apos;m Nicholas</h3>
+          <div className="col-span-1 md:col-span-8 order-1 md:order-2">
+            <div className="bg-white dark:bg-gray-800 p-12 rounded-xl shadow-lg dark:shadow-gray-700">
+              <h3 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Building systems that stay reliable under real production load</h3>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
-                I&apos;m a backend-leaning full-stack engineer with a few years of production experience under my belt. Most of my work lives in Ruby on Rails — I&apos;ve led multi-version upgrades on live systems, designed and hardened APIs, managed deployment pipelines across multiple environments, and debugged the kind of production issues that don&apos;t show up in tutorials.
+                I&apos;m a <span className="font-semibold">Full-Stack Engineer</span> based in Livingstone, Zambia, working across Ruby on Rails, React, and Next.js. I own and scale backend systems for organizations that can&apos;t afford downtime — across government, healthcare, and e-commerce.
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
-                Right now I&apos;m contracting on two live products: a public sector CMS serving government bodies across Europe, and Bluemify, a healthcare platform I helped build from the ground up as one of two backend engineers. It recently went live and is onboarding its first users.
+                My core strength is <span className="font-semibold">legacy system modernization</span>. I take Rails applications that are multiple major versions behind and upgrade them safely — most recently Rails 5.2 → 7.2 and Ruby 2.6 → 3.2 with <span className="font-semibold">zero downtime</span> on a live multi-subsite CMS serving government bodies. I rebuild the deployment and observability tooling around them so issues get caught before they reach users. The same discipline applies to every codebase I touch: understand the failure modes first, fix root causes, automate the boring parts.
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
-                I also build my own things. Keelfine is a personal finance app I&apos;ve been working on, built with Rails and Tailwind CSS v4, aimed at everyday users in the Zambian market.
-              </p>
-
-              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed break-words">
-                I work remotely, async, and I take ownership of what I ship. If you have a hard Rails problem or a production system that needs serious attention, I&apos;d like to hear about it.
+                Beyond modernization, I&apos;ve built <span className="font-semibold">authentication and workflow architecture</span> for a healthcare platform connecting patients with doctors across in-person, home-based, and virtual care — covering diagnostic image pipelines, payment processing, and video consultation integration. I also led a full <span className="font-semibold">WordPress/WooCommerce migration</span> for a European e-commerce store, owning both the technical execution and project management end-to-end.
               </p>
 
               {/* CTA Button */}

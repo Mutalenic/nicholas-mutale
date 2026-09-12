@@ -1,182 +1,94 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGem, FaCode } from "react-icons/fa";
-import {
-  SiRubyonrails,
-  SiRedux,
-  SiTailwindcss,
-  SiTypescript,
-  SiNextdotjs,
-  SiPostgresql,
-  SiRedis,
-} from "react-icons/si";
 
-const skillsData = [
+const skillGroups = [
   {
-    name: "Ruby on Rails",
-    icon: <SiRubyonrails size={38} />,
-    color: "bg-[#CC0000]",
-    category: "backend",
+    title: "Languages",
+    skills: [
+      "Ruby",
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "SQL",
+      "HAML",
+      "ERB",
+      "SCSS",
+      "Bash/Shell",
+      "PHP",
+    ],
   },
   {
-    name: "Ruby",
-    icon: <FaGem size={38} />,
-    color: "bg-[#CC342D]",
-    category: "language",
+    title: "Frameworks & Libraries",
+    skills: ["Ruby on Rails", "React", "Next.js", "Redux", "Hotwire (Turbo + Stimulus)"],
   },
   {
-    name: "PostgreSQL",
-    icon: <SiPostgresql size={38} />,
-    color: "bg-[#336791]",
-    category: "backend",
+    title: "Databases",
+    skills: ["PostgreSQL", "MySQL", "Redis", "Elasticsearch", "ActiveRecord ORM"],
   },
   {
-    name: "Redis",
-    icon: <SiRedis size={38} />,
-    color: "bg-[#DC382D]",
-    category: "backend",
+    title: "DevOps & Infrastructure",
+    skills: [
+      "Capistrano",
+      "Gemfury",
+      "Passenger/Nginx",
+      "rbenv",
+      "Docker",
+      "Linux server administration",
+      "SSH bastion access",
+    ],
   },
   {
-    name: "Capistrano",
-    icon: <FaCode size={38} />,
-    color: "bg-[#6B7280]",
-    category: "backend",
+    title: "Observability & Monitoring",
+    skills: ["Sentry", "New Relic", "Structured log analysis", "Incident response playbooks"],
   },
   {
-    name: "Hotwire (Turbo + Stimulus)",
-    icon: <FaCode size={38} />,
-    color: "bg-[#4F46E5]",
-    category: "backend",
+    title: "Security & APIs",
+    skills: [
+      "RESTful API design",
+      "JWT",
+      "Devise",
+      "Pundit",
+      "CanCanCan",
+      "OmniAuth/OAuth2",
+      "OTP/2FA",
+      "Content Security Policy",
+    ],
   },
   {
-    name: "JWT",
-    icon: <FaCode size={38} />,
-    color: "bg-[#9333EA]",
-    category: "backend",
+    title: "Testing",
+    skills: [
+      "RSpec",
+      "FactoryBot",
+      "Capybara",
+      "Selenium",
+      "Cypress",
+      "Jest",
+      "Brakeman",
+      "RuboCop",
+    ],
   },
   {
-    name: "Devise",
-    icon: <FaCode size={38} />,
-    color: "bg-[#B91C1C]",
-    category: "backend",
+    title: "Integrations",
+    skills: [
+      "Zoom API",
+      "Payment gateways (SasaPay, DPO Pay, Mollie)",
+      "Cloudinary",
+      "AWS S3",
+      "Google OAuth2",
+    ],
   },
   {
-    name: "Pundit",
-    icon: <FaCode size={38} />,
-    color: "bg-[#374151]",
-    category: "backend",
-  },
-  {
-    name: "RSpec",
-    icon: <FaCode size={38} />,
-    color: "bg-[#CC342D]",
-    category: "backend",
-  },
-  {
-    name: "Docker",
-    icon: <FaCode size={38} />,
-    color: "bg-[#0EA5E9]",
-    category: "backend",
-  },
-  {
-    name: "AWS S3",
-    icon: <FaCode size={38} />,
-    color: "bg-[#F59E0B]",
-    category: "backend",
-  },
-  {
-    name: "React",
-    icon: <FaReact size={40} />,
-    color: "bg-[#61DAFB]",
-    category: "frontend",
-  },
-  {
-    name: "Next.js",
-    icon: <SiNextdotjs size={38} />,
-    color: "bg-black",
-    category: "frontend",
-  },
-  {
-    name: "Redux",
-    icon: <SiRedux size={38} />,
-    color: "bg-[#764ABC]",
-    category: "frontend",
-  },
-  {
-    name: "TypeScript",
-    icon: <SiTypescript size={38} />,
-    color: "bg-[#3178C6]",
-    category: "language",
-  },
-  {
-    name: "JavaScript",
-    icon: <FaJs size={38} />,
-    color: "bg-[#F7DF1E]",
-    category: "language",
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss size={38} />,
-    color: "bg-[#38B2AC]",
-    category: "frontend",
-  },
-  {
-    name: "HTML5",
-    icon: <FaHtml5 size={38} />,
-    color: "bg-[#E34F26]",
-    category: "frontend",
-  },
-  {
-    name: "CSS3",
-    icon: <FaCss3Alt size={38} />,
-    color: "bg-[#1572B6]",
-    category: "frontend",
+    title: "E-Commerce & CMS",
+    skills: ["WordPress", "WooCommerce", "Elementor", "Multi-site CMS architecture"],
   },
 ];
 
-const categories = [
-  { id: "all", label: "All" },
-  { id: "backend", label: "Backend" },
-  { id: "frontend", label: "Frontend" },
-  { id: "language", label: "Languages" },
+const stats = [
+  { value: "3", label: "Industries Served in Production" },
+  { value: "20%+", label: "Query Performance Gains Delivered" },
+  { value: "70%", label: "Reduction in Operational Toil" },
+  { value: "Zero-Downtime", label: "Major Version Upgrades Led" },
 ];
-
-const SkillCard = ({ skill }: { skill: (typeof skillsData)[number] }) => {
-  return (
-    <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transform hover:scale-105 transition-all duration-300 overflow-hidden border border-gray-100 dark:border-gray-700 group h-full">
-      <div className="absolute inset-0 opacity-5 dark:opacity-10 z-0">
-        <div
-          className={`w-32 h-32 ${skill.color} rounded-full -top-12 -right-12 absolute blur-xl`}
-        ></div>
-        <div
-          className={`w-24 h-24 ${skill.color} rounded-full -bottom-8 -left-8 absolute blur-lg`}
-        ></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5 dark:to-white/5"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/5 dark:from-white/5 to-transparent"></div>
-        <div
-          className={`absolute w-full h-16 -bottom-8 left-0 transform rotate-6 scale-125 ${skill.color} opacity-10`}
-        ></div>
-      </div>
-
-      <div className="flex flex-col items-center p-4 text-center relative z-10">
-        <div
-          className={`p-3 rounded-full ${skill.color} bg-opacity-15 dark:bg-opacity-30 mb-3 backdrop-blur-sm ring-1 ring-gray-100 dark:ring-gray-700 shadow-md group-hover:shadow-lg transition-all duration-300`}
-        >
-          <div className="text-gray-800 dark:text-white group-hover:scale-110 transition-transform duration-300">
-            {React.cloneElement(skill.icon, { size: 30 })}
-          </div>
-        </div>
-        <div>
-          <h3 className="font-bold text-sm mb-1 text-gray-800 dark:text-gray-200">
-            {skill.name}
-          </h3>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const Skills: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
   const [isVisible, setIsVisible] = useState(false);
   const skillsRef = useRef<HTMLDivElement | null>(null);
 
@@ -196,11 +108,6 @@ const Skills: React.FC = () => {
       if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
-
-  const filteredSkills =
-    activeCategory === "all"
-      ? skillsData
-      : skillsData.filter((skill) => skill.category === activeCategory);
 
   return (
     <div
@@ -224,33 +131,27 @@ const Skills: React.FC = () => {
         </div>
 
         <div
-          className={`flex flex-wrap justify-center mb-8 gap-3 transition-all duration-1000 delay-200 transform ${
+          className={`transition-all duration-1000 delay-200 transform ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              onClick={() => setActiveCategory(category.id)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                activeCategory === category.id
-                  ? "bg-blue-600 text-white shadow-md"
-                  : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700"
-              }`}
-            >
-              {category.label}
-            </button>
-          ))}
-        </div>
-
-        <div
-          className={`transition-all duration-1000 delay-300 transform ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {filteredSkills.map((skill) => (
-              <SkillCard key={skill.name} skill={skill} />
+          <div className="space-y-8">
+            {skillGroups.map((group) => (
+              <div key={group.title}>
+                <h3 className="text-lg font-semibold mb-3 text-gray-800 dark:text-gray-200">
+                  {group.title}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 text-sm bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
@@ -260,38 +161,16 @@ const Skills: React.FC = () => {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
-            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-              2
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 text-xs mt-1">
-              Live production systems
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
-            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-              4+
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 text-xs mt-1">
-              Years in production
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
-            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-              3
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 text-xs mt-1">
-              Environments managed per deployment pipeline
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
-            <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-              20%+
-            </p>
-            <p className="text-gray-600 dark:text-gray-300 text-xs mt-1">
-              Query performance improvement delivered
-            </p>
-          </div>
+          {stats.map((stat) => (
+            <div key={stat.label} className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+              <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                {stat.value}
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 text-xs mt-1">
+                {stat.label}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

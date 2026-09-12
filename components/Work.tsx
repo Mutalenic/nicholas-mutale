@@ -1,15 +1,23 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
-import { getFeaturedProjects, ProjectData } from "../data/projects";
+import { FaLandmark, FaHeartbeat, FaShoppingCart, FaWallet } from "react-icons/fa";
+import { getFeaturedProjects, ProjectData, ProjectIcon } from "../data/projects";
+
+const projectIcons: Record<ProjectIcon, React.ComponentType<{ size?: number; className?: string }>> = {
+  government: FaLandmark,
+  healthcare: FaHeartbeat,
+  ecommerce: FaShoppingCart,
+  finance: FaWallet,
+};
 
 const ProjectCard: React.FC<{ project: ProjectData; index: number }> = ({
   project,
   index,
 }) => {
-  const { title, description, image, techStack, demoLink, codeLink, badge } =
+  const { title, description, category, gradient, icon, techStack, demoLink, codeLink, badge } =
     project;
   const [isVisible, setIsVisible] = useState(false);
+  const Icon = projectIcons[icon];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -29,12 +37,22 @@ const ProjectCard: React.FC<{ project: ProjectData; index: number }> = ({
         }`}
       >
         <div className="relative group">
-          <div className="overflow-hidden">
-            <Image
-              src={image}
-              alt={`${title} project`}
-              className="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110"
+          <div className={`relative h-56 overflow-hidden bg-gradient-to-br ${gradient}`}>
+            {/* Decorative shapes */}
+            <div className="absolute -top-12 -right-12 w-44 h-44 rounded-full bg-white/10"></div>
+            <div className="absolute -bottom-16 -left-8 w-44 h-44 rounded-full bg-black/10"></div>
+            <Icon
+              size={160}
+              className="absolute -right-6 -bottom-8 text-white/10 rotate-[-12deg]"
             />
+            <div className="relative h-full flex flex-col items-center justify-center gap-3">
+              <div className="bg-white/15 backdrop-blur-sm rounded-2xl p-5 shadow-lg border border-white/20">
+                <Icon size={44} className="text-white drop-shadow-md" />
+              </div>
+              <span className="text-white/90 text-xs font-semibold tracking-widest uppercase bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
+                {category}
+              </span>
+            </div>
           </div>
 
           {badge && (

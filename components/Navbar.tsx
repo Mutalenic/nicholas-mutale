@@ -151,12 +151,14 @@ const Navbar: React.FC = () => {
             </button>
             
             {/* Mobile Menu Button */}
-            <div
+            <button
               onClick={handleNav}
+              aria-expanded={nav}
+              aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
               className="md:hidden ml-4 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               {nav ? <FiX size={25} /> : <FiMenu size={25} />}
-            </div>
+            </button>
           </div>
         </div>
 

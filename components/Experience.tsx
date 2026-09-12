@@ -25,28 +25,6 @@ const Experience: React.FC = () => {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
                     <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">
-                      Confidential Public Sector Client
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Backend Engineer (Contract)
-                    </p>
-                  </div>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    April 2025 – April 2026
-                  </p>
-                </div>
-                <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">
-                  Led Rails upgrade, deployment pipeline management, and production incident resolution for a multi-subsite government CMS.
-                </p>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-blue-600 dark:bg-blue-400"></div>
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-                  <div>
-                    <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">
                       Bluemify
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
@@ -59,6 +37,28 @@ const Experience: React.FC = () => {
                 </div>
                 <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">
                   Built backend infrastructure for a live healthcare platform as one of two backend engineers on a cross-functional team.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full bg-blue-600 dark:bg-blue-400"></div>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100">
+                      Confidential Public Sector Client
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      Backend Engineer (Contract)
+                    </p>
+                  </div>
+                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                    April 2025 – April 2026
+                  </p>
+                </div>
+                <p className="mt-3 text-sm text-gray-700 dark:text-gray-300">
+                  Led Rails upgrade, deployment pipeline management, and production incident resolution for a multi-subsite government CMS.
                 </p>
               </div>
             </div>
