@@ -5,8 +5,6 @@ import { FaLinkedinIn, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
 import { CgChevronDoubleUp } from "react-icons/cg";
 import { HiMail } from "react-icons/hi";
 import { FiSend } from "react-icons/fi";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import getintouchImg from "../public/assets/getintouch.jpg";
 
 const Contact: React.FC = () => {
@@ -119,7 +117,7 @@ const Contact: React.FC = () => {
           <p className="inline-block text-lg font-medium text-blue-600 dark:text-blue-400 mb-4 px-4 py-1 bg-blue-50 dark:bg-blue-900/30 rounded-full">
             GET IN TOUCH
           </p>
-          <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-white">Let&apos;s Work Together</h2>
+          <h2 className="text-3xl font-bold mt-2 text-gray-800 dark:text-white">Get in touch</h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 mx-auto mt-4 rounded-full"></div>
         </div>
         
@@ -143,15 +141,15 @@ const Contact: React.FC = () => {
               
               <div className="mb-8">
                 <h3 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">Nicholas Mutale</h3>
-                <p className="text-gray-600 dark:text-gray-300">I&apos;m available for freelance work, full-time positions, and collaborative projects. 
-                  Feel free to reach out if you have any opportunities or questions!
+                <p className="text-gray-600 dark:text-gray-300">
+                  I&apos;m currently open to remote contract and full-time roles worldwide. If you have a Rails project or want to talk through something, reach out directly.
                 </p>
               </div>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-center text-gray-700 dark:text-gray-300">
                   <FaMapMarkerAlt className="text-blue-600 dark:text-blue-400 mr-3" size={18} />
-                  <span>Lusaka, Zambia</span>
+                  <span>Livingstone, Zambia</span>
                 </div>
                 <div className="flex items-center text-gray-700 dark:text-gray-300">
                   <HiMail className="text-blue-600 dark:text-blue-400 mr-3" size={18} />
@@ -163,7 +161,7 @@ const Contact: React.FC = () => {
                 <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Connect With Me</h4>
                 <div className="flex space-x-4 relative z-50 isolation-auto">
                   <a
-                    href="https://www.linkedin.com/in/nicomutale/"
+                    href="https://www.linkedin.com/in/nicholas-mutale-715714124/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white dark:bg-gray-700 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-500 hover:scale-110 text-blue-600 dark:text-blue-400 hover:text-white dark:hover:text-white hover:bg-[#0077B5] dark:hover:bg-[#0077B5] transform-gpu"
@@ -172,7 +170,7 @@ const Contact: React.FC = () => {
                     <FaLinkedinIn size={18} className="transition-colors duration-500" />
                   </a>
                   <a
-                    href="https://github.com/mutalenic"
+                    href="https://github.com/Mutalenic"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white dark:bg-gray-700 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-500 hover:scale-110 text-gray-800 dark:text-white hover:text-white dark:hover:text-white hover:bg-[#333333] dark:hover:bg-[#333333] transform-gpu"
@@ -188,15 +186,6 @@ const Contact: React.FC = () => {
                     aria-label="Email Contact"
                   >
                     <HiMail size={18} className="transition-colors duration-500" />
-                  </a>
-                  <a
-                    href="https://x.com/nicomutale"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white dark:bg-gray-700 p-3 rounded-full shadow-md hover:shadow-lg transition-all duration-500 hover:scale-110 text-black-400 dark:text-black-300 hover:text-white dark:hover:text-white hover:bg-black dark:hover:bg-black transform-gpu"
-                    aria-label="X Profile"
-                  >
-                    <FontAwesomeIcon icon={faXTwitter} size="lg" className="transition-colors duration-500" />
                   </a>
                 </div>
               </div>

@@ -26,11 +26,13 @@ const FloatingButton: React.FC = () => {
           <Link href="#contact-form">
             <div className="relative group">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-full blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
-              <button 
-                className="relative bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              <span
+                role="button"
+                tabIndex={0}
+                className="relative block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
                 Hire Me
-              </button>
+              </span>
             </div>
           </Link>
         </div>

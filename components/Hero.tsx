@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
 import profileImg from "../public/assets/Profile.jpg";
 
@@ -31,9 +29,6 @@ const Hero: React.FC = () => {
             height={130}
             className="rounded-full border-4 border-white dark:border-gray-800 shadow-lg"
           />
-          <div className="absolute -bottom-2 -right-2 w-10 h-10 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-medium">
-            <span>👋</span>
-          </div>
         </div>
         
         <div className={`transition-all duration-1000 transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
@@ -42,12 +37,11 @@ const Hero: React.FC = () => {
           </h1>
           
           <h2 className="text-2xl md:text-3xl py-2 text-gray-700 dark:text-gray-200 mb-2">
-            A Full Stack Web Developer
+            Full-Stack Engineer — Ruby on Rails & React
           </h2>
           
           <p className="text-md md:text-lg py-4 text-gray-600 dark:text-gray-300 max-w-[700px] mx-auto mb-4">
-            I create responsive web applications with modern technologies.
-            My focus is building intuitive, user-friendly experiences with clean code.
+            I build and maintain production Rails applications — from zero-downtime upgrades on live government platforms to healthcare APIs serving real patients. Based in Zambia, working remotely worldwide.
           </p>
           
           <div className="py-3 text-gray-500 dark:text-gray-400 font-medium">
@@ -56,7 +50,7 @@ const Hero: React.FC = () => {
           
           <div className="flex items-center justify-center space-x-5 py-4 z-10 relative">
             <a
-              href="https://www.linkedin.com/in/nicomutale/"
+              href="https://www.linkedin.com/in/nicholas-mutale-715714124/"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -68,7 +62,7 @@ const Hero: React.FC = () => {
             </a>
             
             <a
-              href="https://github.com/mutalenic"
+              href="https://github.com/Mutalenic"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
@@ -91,17 +85,6 @@ const Hero: React.FC = () => {
               </div>
             </a>
             
-            <a
-              href="https://x.com/mutalenic"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group"
-              aria-label="X Profile"
-            >
-              <div className="bg-white dark:bg-gray-800 rounded-full shadow-lg p-5 cursor-pointer transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl group-hover:bg-[#000] group-hover:text-white text-gray-600 dark:text-gray-300">
-                <FontAwesomeIcon icon={faXTwitter} size="lg" />
-              </div>
-            </a>
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 mb-16">
@@ -109,7 +92,7 @@ const Hero: React.FC = () => {
               href="#contact-form"
               className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-full shadow-lg hover:shadow-xl transform transition-all duration-300 hover:-translate-y-1 font-bold"
             >
-              Hire Me
+              Get in touch
             </a>
             <a
               href="#work"

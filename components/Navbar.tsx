@@ -124,6 +124,14 @@ const Navbar: React.FC = () => {
                 </Link>
               </li>
               <li className="group">
+                <Link href="/#experience">
+                  <span className="text-base font-medium relative overflow-hidden group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                    Experience
+                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 group-hover:w-full transition-all duration-300"></span>
+                  </span>
+                </Link>
+              </li>
+              <li className="group">
                 <Link href="/#contact">
                   <span className="text-base font-medium relative overflow-hidden group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     Contact
@@ -143,12 +151,14 @@ const Navbar: React.FC = () => {
             </button>
             
             {/* Mobile Menu Button */}
-            <div
+            <button
               onClick={handleNav}
+              aria-expanded={nav}
+              aria-label={nav ? "Close navigation menu" : "Open navigation menu"}
               className="md:hidden ml-4 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
             >
               {nav ? <FiX size={25} /> : <FiMenu size={25} />}
-            </div>
+            </button>
           </div>
         </div>
 
@@ -179,6 +189,11 @@ const Navbar: React.FC = () => {
             <Link href="/#work">
               <span onClick={handleNav} className="text-2xl font-medium text-white hover:text-blue-400 transition-colors">
                 Projects
+              </span>
+            </Link>
+            <Link href="/#experience">
+              <span onClick={handleNav} className="text-2xl font-medium text-white hover:text-blue-400 transition-colors">
+                Experience
               </span>
             </Link>
             <Link href="/#contact">

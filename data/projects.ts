@@ -1,90 +1,102 @@
-import { StaticImageData } from 'next/image';
-import moviespace from "../public/assets/projects/moviespace2.png";
-import spaceTravellers from "../public/assets/projects/SpaceTravellerHub.png";
-import digiBudgetApp from "../public/assets/projects/DigiApp.png";
-import airquality from "../public/assets/projects/airquality.png";
+export type ProjectIcon = "government" | "healthcare" | "ecommerce" | "finance";
 
 export interface ProjectData {
   id: string;
   title: string;
   description: string;
-  image: StaticImageData;
+  category: string;
+  gradient: string;
+  icon: ProjectIcon;
   techStack: string[];
-  demoLink: string;
-  codeLink: string;
-  detailsLink: string;
+  demoLink?: string;
+  codeLink?: string;
+  detailsLink?: string;
   featured?: boolean;
+  badge?: string;
 }
 
-// This array can be extended with more projects in the future
 export const projectsData: ProjectData[] = [
   {
-    id: "air-quality",
-    title: "Air Quality",
-    description: "This is an app for tracking air pollution in a country. In this web app you will be able to see the current air quality data and also can track the data of air pollution based on gas percentage of air.",
-    image: airquality,
-    techStack: ["React", "Redux", "CSS", "Restcountries API", "Openweather API"],
-    demoLink: "https://deploy-preview-2--stately-kashata-1db13f.netlify.app/",
-    codeLink: "https://github.com/Mutalenic/air-quality-data",
-    detailsLink: "/airquality",
+    id: "public-sector-cms",
+    title: "Public Sector CMS — Multi-site Platform",
+    description:
+      "Part-time contract on a high-availability multi-subsite CMS used by government bodies across Europe. Led a zero-downtime Rails 5.2 → 7.2 and Ruby 2.6 → 3.2 upgrade across multiple independently deployed subsites, each with their own staging and production environments managed via Capistrano 3 pipelines. Reduced operational toil by 70% and improved admin query performance by 20%+.",
+    category: "Government Platform",
+    gradient: "from-blue-600 via-indigo-600 to-violet-600",
+    icon: "government",
+    techStack: [
+      "Ruby on Rails 7.2",
+      "Capistrano 3",
+      "PostgreSQL",
+      "Gemfury",
+      "Passenger/Nginx",
+      "Sentry",
+    ],
+    badge: "Live · Confidential",
     featured: true,
   },
   {
-    id: "moviespace",
-    title: "Moviespace",
-    description: "This JavaScript capstone project is about building a web application based on an external API. We selected an API that provides data about a topic we liked and then built the web app around it. The web app has 2 user interfaces.",
-    image: moviespace,
-    techStack: ["JavaScript", "CSS", "HTML", "TVmazeApi", "Webpack"],
-    demoLink: "https://natig25.github.io/MovieSpace/",
-    codeLink: "https://github.com/Mutalenic/JS-capstone",
-    detailsLink: "/moviespace",
+    id: "bluemify",
+    title: "Bluemify — Healthcare Platform",
+    description:
+      "Backend engineering on a live healthcare platform connecting patients with doctors across in-person, home-based, and virtual consultation types. Built as one of two backend engineers on a cross-functional team of four. Delivered the radiology workflow, patient dashboard API, Zoom integration for virtual consultations, Cloudinary-backed document storage, and full authentication hardening including JWT, OTP/2FA, and role-based access control.",
+    category: "Healthcare",
+    gradient: "from-teal-500 via-cyan-600 to-sky-600",
+    icon: "healthcare",
+    techStack: [
+      "Ruby on Rails 7.1",
+      "PostgreSQL",
+      "JWT",
+      "Devise",
+      "Pundit",
+      "Zoom API",
+      "Cloudinary",
+      "RSpec",
+    ],
+    badge: "Live · Confidential",
     featured: true,
   },
   {
-    id: "digi-budget",
-    title: "Digi-Budget",
-    description: "The DigiBudget App is a mobile web application that allows the user to manage his/her budget: they have a list of transactions associated with a category, so that the user can see how much money they spend and on a particular category.",
-    image: digiBudgetApp,
-    techStack: ["Ruby", "Ruby on Rails", "PostgreSQL", "Tailwindcss"],
-    demoLink: "https://joli-choucroute-65855.herokuapp.com/",
-    codeLink: "https://github.com/Mutalenic/digi_budget",
-    detailsLink: "/digibudgetapp",
+    id: "ecommerce-migration",
+    title: "E-Commerce Platform Migration",
+    description:
+      "Led the migration of a European e-commerce store from a legacy website builder to a custom WordPress/WooCommerce build — acting as both developer and project manager. Owned theme customization with Elementor, Mollie payment gateway integration, EU VAT/tax and shipping-zone compliance, shipping-provider tooling, and systematic multi-pass UI audits to catch regressions before launch.",
+    category: "E-Commerce",
+    gradient: "from-rose-500 via-orange-500 to-amber-500",
+    icon: "ecommerce",
+    techStack: [
+      "WordPress",
+      "WooCommerce",
+      "Elementor",
+      "PHP",
+      "Mollie",
+    ],
     featured: true,
   },
   {
-    id: "space-travelers",
-    title: "Space Travelers Hub",
-    description: "Real live data from the SpaceX API. A web application built with React and Redux for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions.",
-    image: spaceTravellers,
-    techStack: ["React", "Redux", "CSS", "SpaceApi"],
-    demoLink: "https://6262b54ee8f3d52d5200c258--tiny-bavarois-1b6015.netlify.app/",
-    codeLink: "https://github.com/Mutalenic/space_travelers_hub",
-    detailsLink: "/spacetraveller",
+    id: "keelfine",
+    title: "Keelfine",
+    description:
+      "A personal finance application built for everyday users. Rails backend, Tailwind CSS v4, Devise authentication, and vanilla JavaScript. Architected with a semantic CSS token system supporting full light/dark theming. Built for the Zambian market with a focus on simplicity and mobile usability.",
+    category: "Personal Finance",
+    gradient: "from-emerald-500 via-green-600 to-teal-600",
+    icon: "finance",
+    techStack: [
+      "Ruby on Rails",
+      "Tailwind CSS v4",
+      "Devise",
+      "PostgreSQL",
+      "Vanilla JS",
+    ],
+    demoLink: "https://keelfine.app",
     featured: true,
   },
-  // You can add more projects here
-  // Example:
-  /*
-  {
-    id: "new-project",
-    title: "New Project Title",
-    description: "Description of your new project...",
-    image: newProjectImage,  // Import this image at the top
-    techStack: ["Tech1", "Tech2", "Tech3"],
-    demoLink: "https://demo-link.com",
-    codeLink: "https://github.com/yourusername/repo",
-    detailsLink: "/project-detail-page",
-    featured: true,  // Set to true if you want it to appear on the homepage
-  },
-  */
 ];
 
-// Helper function to get featured projects
 export const getFeaturedProjects = () => {
-  return projectsData.filter(project => project.featured);
+  return projectsData.filter((project) => project.featured);
 };
 
-// Helper function to get all projects
 export const getAllProjects = () => {
   return projectsData;
 };
